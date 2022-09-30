@@ -22,7 +22,7 @@ services:
         # https://stackoverflow.com/a/32785014
         - /usr/src/app/node_modules
 
-    # This is the configuration for our PostgreSQL database container
+    # This is the configuration for our PostgreSQL database container 
     # Note the `postgres` name is important, in out Node app when we refer
     # to  `host: "postgres"` that value is mapped on the network to the 
     # address of this container.
@@ -38,7 +38,8 @@ services:
             - "5435:5432"
         restart: always
         volumes:
-        # We are gonna create "2.PERN_Todo_Vol" volumen inside the folder "/Documentos/Docker_vol/", the route for sql it is always the same: /var/lib/postgresql/data
+        # We are gonna create "2.PERN_Todo_Vol" volumen inside the folder "/Documentos/Docker_vol/",
+        # the route for postgresql it is always the same: /var/lib/postgresql/data
         - ~/Documentos/Docker_vol/2.PERN_Todo_Vol:/var/lib/postgresql/data/
 
     pgadmin:
